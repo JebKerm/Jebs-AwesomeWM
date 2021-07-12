@@ -1,0 +1,8 @@
+local ruled = require("ruled")
+ruled.client.connect_signal("request::rules", function()
+	require("rules.global")
+	require("rules.floating")
+	require("rules.titlebars")
+	require("rules.firefox")
+	require("rules.notifications")
+end)
