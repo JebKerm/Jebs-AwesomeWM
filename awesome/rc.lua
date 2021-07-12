@@ -8,7 +8,8 @@ require("util.errhandling") -- Manages errors on startup
 require("awful.autofocus") -- When we close a window, the next one will be focused
 
 local beautiful = require("beautiful")
-beautiful.init("/home/fab/.config/awesome/theme.lua")
+local HOME_DIR = os.getenv("HOME")
+beautiful.init(HOME_DIR.."/.config/awesome/theme.lua")
 
 vars = require("util.usrvars") -- Exports user variables such as terminal and editor of preference
 modkey = vars.modkey
